@@ -8,9 +8,8 @@ public class StreamMain {
         //получения потока из массива целых чисел
         //Stream<Integer> numbers = Stream.of(1, 2, 5, 16, -1, -2, 0, 32, 3, 5, 8, 23, 4);
         //numbers.filter(x -> x > 0).filter(x -> x % 2 == 0).sorted(Comparator.naturalOrder()).forEach(n -> System.out.println(n));
-        Stream<Integer> stream = intList.stream();
-        stream = stream.filter(x -> x > 0);
-        stream
+        intList.stream()
+                .filter(x -> x > 0)
                 .filter(x -> x % 2 == 0)
                 .sorted(Comparator.naturalOrder())
                 .forEach(System.out::println);
